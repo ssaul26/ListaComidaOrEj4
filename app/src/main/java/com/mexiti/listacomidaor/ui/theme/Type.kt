@@ -2,33 +2,26 @@ package com.mexiti.listacomidaor.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.mexiti.listacomidaor.R
 
-// Set of Material typography styles to start with
+// Crear una familia de fuentes que use RocketCrunch
+val RocketCrunchFontFamily = FontFamily(
+    Font(R.font.rocketcrunch, FontWeight.Normal)  // Usa el archivo rocketcrunch.otf
+)
+
 val Typography = Typography(
-    bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
+    headlineMedium = TextStyle(
+        fontFamily = RocketCrunchFontFamily,  // Usa RocketCrunch en el estilo headlineMedium
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    )
-    /* Other default text styles to override
-    titleLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 22.sp,
-        lineHeight = 28.sp,
-        letterSpacing = 0.sp
+        fontSize = 24.sp
     ),
-    labelSmall = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
+    bodyLarge = TextStyle(
+        fontFamily = RocketCrunchFontFamily,  // También usa RocketCrunch en bodyLarge
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp
     )
-    */
 )
